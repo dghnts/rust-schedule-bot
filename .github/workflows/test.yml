@@ -1,0 +1,15 @@
+name: Debug Secret Env Var
+
+on:
+  workflow_dispatch:  # 手動実行用
+
+jobs:
+  debug-secret:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display secret env variable
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+        run: |
+          echo "NOTION_DATABASE_ID = $NOTION_DATABASE_ID"
