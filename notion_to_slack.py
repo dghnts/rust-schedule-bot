@@ -92,6 +92,3 @@ try:
     print("✅ Slack通知成功")
 except SlackApiError as e:
     print("❌ Slack通知エラー:", e.response["error"])
-
-with open("logs/execution.log", "a", encoding="utf-8") as f:
-    f.write(f"[{datetime.datetime.now()}] Slack通知完了\n")
