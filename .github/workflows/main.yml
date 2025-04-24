@@ -24,6 +24,6 @@ jobs:
       - name: Run notifier script
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: python notion_to_slack.py
